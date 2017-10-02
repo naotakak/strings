@@ -4,9 +4,11 @@ char *stircpy(char *dest, const char *src);
 int *stirlen(char *str);
 char *stircat(char *dest, char *src);
 int stircmp(char *s1, char *s2);
+char *strchr( char *s, char c);
 
 
 int main() {
 
     return 0;
 }
+
