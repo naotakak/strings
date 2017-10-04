@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<string.h>
 
 char *stircpy(char *dest, const char *src);
 int stirlen(char *str);
@@ -28,6 +29,19 @@ int main() {
     printf("%s compared to %s == %d\n", str2, str4, stircmp(str2, str4));
     printf("%s compared to %s == %d\n", str4, str3, stircmp(str4, str3));
 
+    printf("str1: [%s]\n",  str1);
+    printf("str2: [%s]\n",  str2);
+    printf("str3: [%s]\n",  str3);
+    printf("str4: [%s]\n\n",  str4);
+
+    printf("Testing strlen(str1):\n[standard]: %d\n[ours]: %d\n\n", strlen(str1), stirlen(str1));
+
+    printf("Testing strcat(str3, str4):\n[standard]: %s\n[ours]: %s\n\n", strcat(str3,str4), stircat(str3, str4));
+
+    printf("Testing strchr(str1, 'e'):\n[standard]: %p\n[ours]: %p\n\n", strchr(str1, 'e'), stirchr(str1, 'e'));
+
+    printf("Testing strchr(str1, 'h'):\n[standard]: %p\n[ours]: %p\n\n", strchr(str1, 'h'), stirchr(str1, 'h'));
+    
     return 0;
 }
 
